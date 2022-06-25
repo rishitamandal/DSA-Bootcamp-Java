@@ -1,0 +1,25 @@
+package com.rishita;
+
+import java.util.Scanner;
+
+public class Armstrong {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Enter a Number : ");
+        int num = in.nextInt();
+        int temp = num ;
+        int arms = 0;
+
+        while (temp>0) {
+            int rem = temp % 10;
+            arms = arms +(rem * rem * rem);
+            temp/=10;
+        }
+        if (num == arms){
+            System.out.println("Armstrong Number.");
+        }else{
+            System.out.println("Not a Armstrong Number.");
+        }
+    }
+}
